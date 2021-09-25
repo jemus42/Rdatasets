@@ -29,7 +29,7 @@ xdat <- read.csv(here::here("datasets.csv")) %>%
        select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
 
 datatable(
-  head(xdat), 
+  xdat, 
   style = "bootstrap4",
   options = list(paging = FALSE), 
   filter = "top"
