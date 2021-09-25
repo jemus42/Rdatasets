@@ -43,6 +43,7 @@ Imports:
     ggplot2,
     ggplot2movies,
     gt,
+    here,
     HistData,
     HLMdiag,
     HSAUR,
