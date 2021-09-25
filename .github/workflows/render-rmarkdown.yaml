@@ -25,7 +25,9 @@ jobs:
 
       - name: Scrape datasets
         run: |
-          Rscript -e 'scrape.R'
+          pwd
+          ls -la
+          # Rscript -e 'scrape.R'
 
       - name: Render Rmarkdown files
         run: |
