@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Advanced Gastric Cancer dataset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for gastadj"><tr><td>gastadj</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Advanced Gastric Cancer dataset</h2>
+
+<h3>Description</h3>
+
+<p>This meta-analysis was carried out by the GASTRIC (Global Advanced/Adjuvant Stomach 
+Tumor Research international Collaboration) group, using individual data on patients 
+with curatively resected gastric cancer. Data from all published randomized trials, 
+with a patient recruitment end date before 2004, and comparing adjuvant chemotherapy 
+with surgery alone for resectable gastric cancers, were searched electronically. 
+The candidate surrogate endpoint <b>S</b> was Desease-free survival time, defined 
+as the time (in days) to relapse, second cancer or dead from any cause. The true 
+endpoint <b>T</b> was the overall survival time, defined as the time (in days) from 
+randomization to death of any cause or to the last follow-up.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(gastadj)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns: 
+</p>
+
+<dl>
+<dt>trialID</dt><dd><p>The trial in which the patient was treated</p>
+</dd>
+<dt>patientID</dt><dd><p>The identification number of a patient</p>
+</dd> 
+<dt>trt</dt><dd><p>The treatment indicator, coded as 0 = Control and 1 = Experimental</p>
+</dd>
+<dt>timeS</dt><dd><p>The candidate surrogate (progression-free survival in days) </p>
+</dd>
+<dt>statusS</dt><dd><p>Censoring indicator for for Progression-free survival 
+(0 = alive and progression-free, 1 = with progression or dead)</p>
+</dd>
+<dt>timeT</dt><dd><p>The true endpoint (overall survival time in days)</p>
+</dd>
+<dt>statusT</dt><dd><p>Censoring indicator for survival time (0 = alive, 1 = dead)</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Oba K, Paoletti X, Alberts S, Bang YJ, Benedetti J, Bleiberg H, Catalona P, 
+Lordick F, Michiels S, Morita A, Okashi Y, Pignon JP, Rougier P, Sasako M, 
+Sakamoto J, Sargent D, Shitara K, Van Cutsem E, Buyse M, Burzykowski T on 
+behalf of the GASTRIC group (2013). Disease-Free Survival as a Surrogate 
+for Overall Survival in Adjuvant Trials of Gastric Cancer: A Meta-Analysis. 
+<em>JNCI: Journal of the National Cancer Institute</em>;<b>105(21)</b>:1600-1607
+</p>
+
+
+</div></body></html>

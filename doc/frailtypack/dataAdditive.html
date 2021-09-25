@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulated data as a gathering of clinical trials databases</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for dataAdditive"><tr><td>dataAdditive</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Simulated data as a gathering of clinical trials databases</h2>
+
+<h3>Description</h3>
+
+<p>This contains simulated samples of 100 clusters with 100 subjects in each
+cluster, like a gathering of clinical trials databases. Two correlated
+centred gaussian random effects are generated with the same variance fixed
+at 0.3 and the covariance at -0.2. The regression coefficient <i>&beta;</i> is
+fixed at -0.11. The percentage of right-censored data is around 30 percent
+which are generated from a uniform distribution on [1,150]. The baseline
+hazard function is considered as a simple Weibull.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(dataAdditive)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns: </p>
+
+<dl>
+<dt>group</dt><dd><p>identification variable</p>
+</dd> <dt>t1</dt><dd><p>start of interval (=0,
+because left-truncated data are not allowed)</p>
+</dd> <dt>t2</dt><dd><p>end of interval
+(death or censoring time)</p>
+</dd> <dt>event</dt><dd><p>censoring status (0:alive, 1:death,
+as acensoring indicator</p>
+</dd> <dt>var1</dt><dd><p>dichotomous covariate (=0 or 1,as a
+treatment variable)</p>
+</dd> <dt>var2</dt><dd><p>dichotomous covariate (=0 or 1,as a
+treatment variable)</p>
+</dd> </dl>
+
+
+
+<h3>Source</h3>
+
+<p>V. Rondeau, S. Michiels, B.Liquet, and J.P. Pignon (2008). Investigating
+trial and treatment heterogeneity in an individual patient data
+meta-analysis of survival data by mean of the maximum penalized likelihood
+approach. <em>Statistics in Medecine</em>, <b>27</b>, 1894-1910.
+</p>
+
+
+</div></body></html>

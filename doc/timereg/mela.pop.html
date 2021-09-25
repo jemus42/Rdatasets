@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Melanoma data and Danish population mortality by age and sex</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for mela.pop"><tr><td>mela.pop</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Melanoma data and Danish population mortality by age and sex
+</h2>
+
+<h3>Description</h3>
+
+<p>Melanoma data with background mortality of Danish population.
+</p>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns:
+</p>
+
+<dl>
+<dt>id</dt><dd> 
+<p>a numeric vector. Gives patient id.
+</p>
+</dd>
+<dt>sex</dt><dd>
+<p>a numeric vector. Gives sex of patient.
+</p>
+</dd>
+<dt>start</dt><dd>
+<p>a numeric vector. 
+Gives the starting time for the
+time-interval for which the covariate rate is representative.
+</p>
+</dd>
+<dt>stop</dt><dd>
+<p>a numeric vector. Gives the stopping time for the
+time-interval for which the covariate rate is representative.
+</p>
+</dd>
+<dt>status</dt><dd>
+<p>a numeric vector code. Survival status. 1: dead from melanoma, 0: alive or
+dead from other cause.
+</p>
+</dd>
+<dt>age</dt><dd>
+<p>a numeric vector. Gives the age of the patient at removal of tumor.
+</p>
+</dd>
+<dt>rate</dt><dd>
+<p>a numeric vector. Gives the population mortality for the 
+given sex and age.  Based on Table A.2 in Andersen 
+et al. (1993). 
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Andersen, P.K., Borgan O, Gill R.D., Keiding N. (1993),
+<em>Statistical Models Based on 
+Counting Processes</em>, Springer-Verlag. 
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(mela.pop)
+names(mela.pop)
+</pre>
+
+
+</div></body></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulated data for recurrent events and a terminal event with...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for dataNCC"><tr><td>dataNCC</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Simulated data for recurrent events and a terminal event with weigths using
+nested case-control design</h2>
+
+<h3>Description</h3>
+
+<p>This contains a simulated sample of of 819 subjects and 1510 observations.
+This dataset can be used to illustrate how to fit a joint frailty model for
+data from nested case-control studies.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(dataNCC)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns: </p>
+
+<dl>
+<dt>id</dt><dd><p>identification of patient</p>
+</dd> <dt>cov1</dt><dd><p>dichotomous covariate
+(0,1)</p>
+</dd> <dt>cov2</dt><dd><p>dichotomous covariate (0,1)</p>
+</dd> <dt>t.start</dt><dd><p>start of
+interval</p>
+</dd> <dt>t.stop</dt><dd><p>end of interval (death or censoring time)</p>
+</dd>
+<dt>gaptime</dt><dd><p>time to event</p>
+</dd> <dt>event</dt><dd><p>recurrent event status (0:no,
+1:yes)</p>
+</dd> <dt>deathdays</dt><dd><p>time of terminal event (death or right-censoring)</p>
+</dd>
+<dt>death</dt><dd><p>censoring status (0:alive, 1:death)</p>
+</dd> <dt>ncc.wts</dt><dd><p>weights for
+NCC design</p>
+</dd> </dl>
+
+
+
+</div></body></html>

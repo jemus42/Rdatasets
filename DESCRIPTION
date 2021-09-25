@@ -13,6 +13,7 @@ License: GPL-3
 URL: https://vincentarelbundock.github.io/Rdatasets
 BugReports: https://github.com/vincentarelbundock/Rdatasets/issues
 Imports: 
+    addhazard,
     AER,
     APtools,
     asaur,
@@ -35,6 +36,7 @@ Imports:
     forecast,
     fpp2,
     frailtyHL,
+    frailtypack,
     frailtySurv,
     gap,
     geepack,
@@ -48,6 +50,7 @@ Imports:
     ISLR,
     JM,
     joineR,
+    kmi,
     KMsurv,
     lattice,
     lme4,
@@ -58,6 +61,7 @@ Imports:
     mi,
     mosaicData,
     MRsurv,
+    MST,
     mstate,
     multgee,
     nycflights13,
@@ -80,12 +84,16 @@ Imports:
     sem,
     simPH,
     smcure,
+    SmoothHazard,
+    spBayesSurv,
     Stat2Data,
     stevedata,
     survival,
     texmex,
+    TH.data,
     tidyr,
     tidyverse,
+    timereg,
     vcd
 Suggests: 
     knitr,

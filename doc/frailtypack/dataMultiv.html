@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Simulated data for two types of recurrent events and a...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for dataMultiv"><tr><td>dataMultiv</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Simulated data for two types of recurrent events and a terminal event</h2>
+
+<h3>Description</h3>
+
+<p>This contains a simulated sample of of 800 subjects and 1652 observations.
+This dataset can be used to illustrate how to fit a joint multivariate
+frailty model. Two gaussian correlated random effects were generated with
+mean 0, variances 0.5 and a correlation coefficient equals to 0.5. The
+coefficients <i>&alpha;_1</i> and <i>&alpha;_2</i> were fixed to 1. The three
+baseline hazard functions followed a Weibull distribution and right
+censoring was fixed at 5.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(dataMultiv)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns: </p>
+
+<dl>
+<dt>PATIENT</dt><dd><p>identification of patient</p>
+</dd> <dt>obs</dt><dd><p>number of observation
+for a patient</p>
+</dd> <dt>TIME0</dt><dd><p>start of interval</p>
+</dd> <dt>TIME1</dt><dd><p>end of interval
+(death or censoring time)</p>
+</dd> <dt>INDICREC</dt><dd><p>recurrent of type 1 status (0:no,
+1:yes)</p>
+</dd> <dt>INDICMETA</dt><dd><p>recurrent of type 2 status (0:no, 1:yes)</p>
+</dd>
+<dt>INDICDEATH</dt><dd><p>censoring status (0:alive, 1:death)</p>
+</dd> <dt>v1</dt><dd><p>dichotomous
+covariate (0,1)</p>
+</dd> <dt>v2</dt><dd><p>dichotomous covariate (0,1)</p>
+</dd>
+<dt>v3</dt><dd><p>dichotomous covariate (0,1)</p>
+</dd> <dt>TIMEGAP</dt><dd><p>time to event</p>
+</dd> </dl>
+
+
+
+</div></body></html>

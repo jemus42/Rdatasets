@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Rehospitalization colorectal cancer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for readmission"><tr><td>readmission</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Rehospitalization colorectal cancer</h2>
+
+<h3>Description</h3>
+
+<p>This contains rehospitalization times after surgery in patients diagnosed
+with colorectal cancer
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(readmission)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>This data frame contains the following columns: </p>
+
+<dl>
+<dt>id</dt><dd><p>identification of each subject. Repeated for each recurrence</p>
+</dd>
+<dt>enum</dt><dd><p>which readmission</p>
+</dd> <dt>t.start</dt><dd><p>start of interval (0 or
+previous recurrence time)</p>
+</dd> <dt>t.stop</dt><dd><p>recurrence or censoring time</p>
+</dd>
+<dt>time</dt><dd><p>interocurrence or censoring time</p>
+</dd> <dt>event</dt><dd><p>rehospitalization
+status. All event are 1 for each subject excepting last one that it is 0</p>
+</dd>
+<dt>chemo</dt><dd><p>Did patient receive chemotherapy? 1: No; 2:Yes</p>
+</dd>
+<dt>sex</dt><dd><p>gender: 1:Males 2:Females</p>
+</dd> <dt>dukes</dt><dd><p>Dukes' tumoral stage:
+1:A-B; 2:C 3:D</p>
+</dd> <dt>charlson</dt><dd><p>Comorbidity Charlson's index. Time-dependent
+covariate.  0: Index 0; 1: Index 1-2; 3: Index &gt;=3 </p>
+</dd> <dt>death</dt><dd><p>death
+indicator. 1:dead and 0:alive </p>
+</dd> </dl>
+
+
+
+<h3>Source</h3>
+
+<p>Gonzalez, JR., Fernandez, E., Moreno, V., Ribes, J., Peris, M., Navarro, M.,
+Cambray, M. and Borras, JM (2005). Sex differences in hospital readmission
+among colorectal cancer patients. <em>Journal of Epidemiology and
+Community Health</em>, <b>59</b>, 6, 506-511.
+</p>
+
+
+</div></body></html>

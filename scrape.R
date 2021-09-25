@@ -1,6 +1,5 @@
 library(R2HTML)
 library(desc)
-suppressMessages(library(tidyverse))
 
 # parse DESCRIPTION to get list of Imports
 packages <- desc_get_deps()$package
