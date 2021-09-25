@@ -5,3 +5,5 @@
 ^pkgdown$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^index\.Rmd$
+^index\.html$

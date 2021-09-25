@@ -12,20 +12,24 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+
+options(DT.warn.size=FALSE)
+library(DT)
+library(dplyr)
 ```
 
 ```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
-library(DT)
-library(kableExtra)
-suppressMessages(library(tidyverse))
 dat <- read.csv(here::here("datasets.csv")) %>%
        mutate(CSV = paste0('<a href="', CSV, '">CSV</a>'),
-              CSV = map(CSV, gt::html),
+              CSV = purrr::map(CSV, gt::html),
               Doc = paste0('<a href="', Doc, '">Doc</a>'),
-              Doc = map(Doc, gt::html)) %>%
+              Doc = purrr::map(Doc, gt::html)) %>%
        select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
 
-
-options(DT.warn.size=FALSE)
-datatable(dat, options=list(paging=FALSE), filter = "top")
+datatable(
+  dat, 
+  style = "bootstrap4",
+  options = list(paging = FALSE), 
+  filter = "top"
+)
 ```
