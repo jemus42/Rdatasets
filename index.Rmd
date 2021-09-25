@@ -22,11 +22,13 @@ library(dplyr)
 
 ```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
 xdat <- read.csv(here::here("datasets.csv")) %>%
-       mutate(CSV = paste0('<a href="', CSV, '">CSV</a>'),
-              CSV = purrr::map(CSV, gt::html),
-              Doc = paste0('<a href="', Doc, '">Doc</a>'),
-              Doc = purrr::map(Doc, gt::html)) %>%
-       select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
+  mutate(
+    CSV = paste0('<a href="', CSV, '">CSV</a>'),
+    CSV = purrr::map(CSV, gt::html),
+    Doc = paste0('<a href="', Doc, '">Doc</a>'),
+    Doc = purrr::map(Doc, gt::html)
+  ) %>%
+  select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
 
 datatable(
   xdat, 
