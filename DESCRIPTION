@@ -1,23 +1,20 @@
 Package: Rdatasets
-Title: A collection of datasets originally distributed in various R packages
+Title: A collection of datasets originally distributed in various R
+    packages
 Version: 1.0.0
 Authors@R: 
     person(given = "Vincent",
            family = "Arel-Bundock",
            role = c("aut", "cre"),
            email = "vincent.arel-bundock@umontreal.ca")
-Description: A collection of datasets originally distributed in various R packages.
+Description: A collection of datasets originally distributed in various R
+    packages.
+License: GPL-3
 URL: https://vincentarelbundock.github.io/Rdatasets
 BugReports: https://github.com/vincentarelbundock/Rdatasets/issues
-License: GPL-3
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
-Remotes:
-    allisonhorst/palmerpenguins  
 Imports: 
     AER,
+    APtools,
     asaur,
     boot,
     car,
@@ -33,44 +30,56 @@ Imports:
     drc,
     DT,
     Ecdat,
+    eha,
     evir,
     forecast,
     fpp2,
+    frailtyHL,
+    frailtySurv,
     gap,
     geepack,
-    gt,
     ggplot2,
     ggplot2movies,
+    gt,
     HistData,
     HLMdiag,
     HSAUR,
     hwde,
     ISLR,
+    JM,
+    joineR,
     KMsurv,
     lattice,
     lme4,
     lmec,
+    locfit,
     MASS,
     mediation,
     mi,
     mosaicData,
+    MRsurv,
     mstate,
     multgee,
     nycflights13,
     openintro,
     palmerpenguins,
+    parfm,
+    pec,
     plm,
     plyr,
     pscl,
     psych,
     purrr,
     quantreg,
+    R2HTML,
+    relsurv,
     reshape2,
     robustbase,
     rpart,
-    R2HTML,
     sandwich,
     sem,
+    simPH,
+    smcure,
     Stat2Data,
     stevedata,
     survival,
@@ -81,4 +90,11 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
+Remotes:
+    allisonhorst/palmerpenguins
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0

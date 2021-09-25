@@ -1,4 +1,4 @@
-library(R2HTML) 
+library(R2HTML)
 library(desc)
 suppressMessages(library(tidyverse))
 
@@ -30,7 +30,7 @@ tidy_data = function(dat) {
     }
     if (inherits(dat, "data.frame")) {
         # tibbles -> data.frame
-        out = as.data.frame(dat) 
+        out = as.data.frame(dat)
         # list columns cannot be saved to CSV and cause problems. see dplyr::starwars
         idx <- sapply(out, function(x) class(x)[1]) != "list"
         out <- out[, idx, drop = FALSE]
@@ -79,7 +79,7 @@ for (i in 1:nrow(index)) {
 
 # Index
 is.binary <- function(x) {
-    tryCatch(length(unique(na.omit(x))) == 2, 
+    tryCatch(length(unique(na.omit(x))) == 2,
              error = function(e) FALSE, silent = TRUE)
 }
 index$Rows = sapply(data, nrow)
@@ -90,13 +90,13 @@ index$n_factor <- sapply(data, function(x) sum(sapply(x, is.factor)))
 index$n_logical <- sapply(data, function(x) sum(sapply(x, is.logical)))
 index$n_numeric <- sapply(data, function(x) sum(sapply(x, is.numeric)))
 
-index$CSV = paste('https://vincentarelbundock.github.io/Rdatasets/csv/',
+index$CSV = paste('https://jemus42.github.io/Rdatasets/csv/',
                   index$Package, '/', index$Item, '.csv', sep='')
-index$Doc = paste('https://vincentarelbundock.github.io/Rdatasets/doc/',
+index$Doc = paste('https://jemus42.github.io/Rdatasets/doc/',
                   index$Package, '/', index$Item, '.html', sep='')
 
 # case insensitive sorting
-index = index[order(tolower(index$Package), 
+index = index[order(tolower(index$Package),
                     tolower(index$Item)),]
 
 # Index CSV

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Swedish death data, 1969-2020.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for swedeaths"><tr><td>swedeaths</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Swedish death data, 1969-2020.
+</h2>
+
+<h3>Description</h3>
+
+<p>A data frame containing data on the number of deaths by sex, age and
+year, Sweden 1969-2020.</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(swedeaths)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 5 variables and 10504 observations.
+</p>
+
+<dl>
+<dt><code>age</code></dt><dd><p>Numerical with integer values 0-100, representing achieved
+age in years during the actual calendar year. The highest value, 100, 
+represents ages 100 and above.</p>
+</dd>
+<dt><code>sex</code></dt><dd><p>A factor with two levels, &quot;women&quot; and &quot;men&quot;.</p>
+</dd>
+<dt><code>year</code></dt><dd><p>Calendar year.</p>
+</dd>
+<dt><code>deaths</code></dt><dd><p>Number of deaths by age, sex, and year.</p>
+</dd>
+<dt><code>id</code></dt><dd><p> Created by the <code>reshape</code> procedure, see Details.</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>Data are downloaded from Statistics Sweden in the form of a csv file and
+and in that process converted to a data frame. Variable names are
+translated from Swedish, 
+and some of them are coverted to factors. Each numeric column contains
+the number of deaths by sex and age. The original data set is in wide
+form and then converted to long format.
+</p>
+
+
+<h3>Source</h3>
+
+<p>Statistics Sweden, <a href="https://scb.se">https://scb.se</a>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code>swepop</code>, <code>tpchreg</code></p>
+
+
+<h3>Examples</h3>
+
+<pre>
+summary(swedeaths)
+## maybe str(swedeaths) ...
+</pre>
+
+
+</div></body></html>
