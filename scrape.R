@@ -81,6 +81,7 @@ is.binary <- function(x) {
     tryCatch(length(unique(na.omit(x))) == 2,
              error = function(e) FALSE, silent = TRUE)
 }
+
 index$Rows = sapply(data, nrow)
 index$Cols = sapply(data, ncol)
 index$n_binary <- sapply(data, function(x) sum(sapply(x, is.binary)))

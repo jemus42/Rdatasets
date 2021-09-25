@@ -3,8 +3,10 @@ title: "Available datasets"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Available datasets}
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, include = FALSE}
@@ -19,7 +21,7 @@ library(dplyr)
 ```
 
 ```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
-dat <- read.csv(here::here("datasets.csv")) %>%
+xdat <- read.csv(here::here("datasets.csv")) %>%
        mutate(CSV = paste0('<a href="', CSV, '">CSV</a>'),
               CSV = purrr::map(CSV, gt::html),
               Doc = paste0('<a href="', Doc, '">Doc</a>'),
@@ -27,7 +29,7 @@ dat <- read.csv(here::here("datasets.csv")) %>%
        select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
 
 datatable(
-  dat, 
+  head(xdat), 
   style = "bootstrap4",
   options = list(paging = FALSE), 
   filter = "top"
