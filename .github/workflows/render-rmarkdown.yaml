@@ -24,7 +24,8 @@ jobs:
         uses: r-lib/actions/setup-renv@v1
 
       - name: Scrape datasets
-        run: "Rscript -e scrape.R"
+        run: |
+          Rscript -e 'scrape.R'
 
       - name: Render Rmarkdown files
         run: |
