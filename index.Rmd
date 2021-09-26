@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-options(DT.warn.size=FALSE)
+options(DT.warn.size = FALSE)
 library(DT)
 library(dplyr)
 ```
