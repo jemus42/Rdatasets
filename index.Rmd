@@ -1,10 +1,6 @@
 ---
 title: "Available datasets"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Available datasets}
-  %\VignetteEncoding{UTF-8}
-  %\VignetteEngine{knitr::rmarkdown}
+output: rmarkdown::html_document
 editor_options: 
   chunk_output_type: console
 ---
