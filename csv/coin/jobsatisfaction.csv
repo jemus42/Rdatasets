@@ -1,0 +1,33 @@
+"","Income","Job.Satisfaction","Gender","Freq"
+"1","<5000","Very Dissatisfied","Female",1
+"2","5000-15000","Very Dissatisfied","Female",2
+"3","15000-25000","Very Dissatisfied","Female",0
+"4",">25000","Very Dissatisfied","Female",0
+"5","<5000","A Little Satisfied","Female",3
+"6","5000-15000","A Little Satisfied","Female",3
+"7","15000-25000","A Little Satisfied","Female",1
+"8",">25000","A Little Satisfied","Female",2
+"9","<5000","Moderately Satisfied","Female",11
+"10","5000-15000","Moderately Satisfied","Female",17
+"11","15000-25000","Moderately Satisfied","Female",8
+"12",">25000","Moderately Satisfied","Female",4
+"13","<5000","Very Satisfied","Female",2
+"14","5000-15000","Very Satisfied","Female",3
+"15","15000-25000","Very Satisfied","Female",5
+"16",">25000","Very Satisfied","Female",2
+"17","<5000","Very Dissatisfied","Male",1
+"18","5000-15000","Very Dissatisfied","Male",0
+"19","15000-25000","Very Dissatisfied","Male",0
+"20",">25000","Very Dissatisfied","Male",0
+"21","<5000","A Little Satisfied","Male",1
+"22","5000-15000","A Little Satisfied","Male",3
+"23","15000-25000","A Little Satisfied","Male",0
+"24",">25000","A Little Satisfied","Male",1
+"25","<5000","Moderately Satisfied","Male",2
+"26","5000-15000","Moderately Satisfied","Male",5
+"27","15000-25000","Moderately Satisfied","Male",7
+"28",">25000","Moderately Satisfied","Male",9
+"29","<5000","Very Satisfied","Male",1
+"30","5000-15000","Very Satisfied","Male",1
+"31","15000-25000","Very Satisfied","Male",3
+"32",">25000","Very Satisfied","Male",6

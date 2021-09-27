@@ -1,0 +1,17 @@
+"","Right.Eye","Left.Eye","Freq"
+"1","Highest Grade","Highest Grade",1520
+"2","Second Grade","Highest Grade",234
+"3","Third Grade","Highest Grade",117
+"4","Lowest Grade","Highest Grade",36
+"5","Highest Grade","Second Grade",266
+"6","Second Grade","Second Grade",1512
+"7","Third Grade","Second Grade",362
+"8","Lowest Grade","Second Grade",82
+"9","Highest Grade","Third Grade",124
+"10","Second Grade","Third Grade",432
+"11","Third Grade","Third Grade",1772
+"12","Lowest Grade","Third Grade",179
+"13","Highest Grade","Lowest Grade",66
+"14","Second Grade","Lowest Grade",78
+"15","Third Grade","Lowest Grade",205
+"16","Lowest Grade","Lowest Grade",492

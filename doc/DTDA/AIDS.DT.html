@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: AIDS Blood Transfusion Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for AIDS.DT"><tr><td>AIDS.DT</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+AIDS Blood Transfusion Data
+</h2>
+
+<h3>Description</h3>
+
+<p>The data include information of transfusions cases of transfusion-related AIDS, corresponding to individuals diagnosed prior to July 1, 1986.  Only 295 patients with consistent data, for which the infection could be attributed to
+a single transfusion or short series were included. Since HIV was unknown before 1982, this implies that cases developing AIDS prior to this date were not reported, leading to a doubly truncated data. The incubation time is doubly truncated due to the interval sampling.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(AIDS.DT)</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 295 observations on the following 4 variables.
+</p>
+
+<dl>
+<dt><code>X</code></dt><dd><p>a numeric vector, the induction or incubation time: time elapsed from HIV infection to AIDS (in months).</p>
+</dd>
+<dt><code>U</code></dt><dd><p>a numeric vector, time from 1982 to HIV infection (in months). </p>
+</dd>
+<dt><code>V</code></dt><dd><p>a numeric vector,time from HIV infection to July 1, 1986 (in months).</p>
+</dd>
+<dt><code>AGE</code></dt><dd><p>a numeric vector, age of the individual at diagnosis (in months).</p>
+</dd>
+</dl>
+
+
+
+<h3>Source</h3>
+
+<p>Kalbfleisch JD and Lawless JF
+</p>
+
+
+<h3>References</h3>
+
+<p>Kalbfleisch JD and Lawless JF (1989) Inference based on retrospective ascertainment: An analysis of the data on transfusion-related AIDS. <em>Journal of the American Statistical Association</em> <b>84</b>, 360&ndash;372.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(AIDS.DT)
+str(AIDS.DT)
+</pre>
+
+
+</div></body></html>

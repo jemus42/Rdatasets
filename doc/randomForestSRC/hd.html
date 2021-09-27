@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Hodgkin's Disease</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for hd"><tr><td>hd</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Hodgkin's Disease</h2>
+
+<h3>Description</h3>
+
+<p>Competing risk data set involving Hodgkin's disease.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame containing:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+    age      </td><td style="text-align: left;"> age</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    sex      </td><td style="text-align: left;"> gender</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+	  trtgiven </td><td style="text-align: left;"> treatment: RT=radition, CMT=Chemotherapy and radiation</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+	  medwidsi </td><td style="text-align: left;"> mediastinum involvement: N=no, S=small, L=Large</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+	  extranod </td><td style="text-align: left;"> extranodal disease: Y=extranodal disease, N=nodal disease</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    clinstg	 </td><td style="text-align: left;"> clinical stage: 1=stage I, 2=stage II</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    time     </td><td style="text-align: left;"> first failure time</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    status   </td><td style="text-align: left;"> censoring status: 0=censored, 1=relapse, 2=death
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Table 1.6b, <em>Competing Risks: A Practical Perspective</em>.
+</p>
+
+
+<h3>References</h3>
+
+<p>Pintilie M., (2006) <em>Competing Risks: A
+Practical Perspective.</em> West Sussex: John Wiley and Sons.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>data(hd, package = "randomForestSRC")</pre>
+
+
+</div></body></html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: White Wine Quality Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for wine"><tr><td>wine</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>White Wine Quality Data</h2>
+
+<h3>Description</h3>
+
+<p>The inputs include objective tests (e.g. PH values) and the output is
+based on sensory data (median of at least 3 evaluations made by wine
+experts) of white wine. Each expert graded the wine quality between 0
+(very bad) and 10 (very excellent).
+</p>
+
+
+<h3>References</h3>
+
+<p>Cortez, P., Cerdeira, A., Almeida, F., Matos T. and Reis, J. (2009).
+Modeling wine preferences by data mining from physicochemical properties.
+In <em>Decision Support Systems</em>, Elsevier, 47(4):547-553.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+## load wine and convert to a multiclass problem
+data(wine, package = "randomForestSRC")
+wine$quality &lt;- factor(wine$quality)
+</pre>
+
+
+</div></body></html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Nutrigenomic Study</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for nutrigenomic"><tr><td>nutrigenomic</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Nutrigenomic Study</h2>
+
+<h3>Description</h3>
+
+<p>Study the effects of five diet treatments on 21 liver lipids and 120
+hepatic gene expression in wild-type and PPAR-alpha deficient mice.  We
+use a multivariate mixed random forest analysis by regressing gene
+expression, diet and genotype (the x-variables) on lipid expressions
+(the multivariate y-responses).
+</p>
+
+
+<h3>References</h3>
+
+<p>Martin P.G. et al. (2007). Novel aspects of PPAR-alpha-mediated
+regulation of lipid and xenobiotic metabolism revealed through a
+nutrigenomic study. <em>Hepatology</em>, 45(3), 767&ndash;777.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## ------------------------------------------------------------
+## multivariate mixed forests
+## lipids used as the multivariate y
+## ------------------------------------------------------------
+
+## load the data
+data(nutrigenomic, package = "randomForestSRC")
+
+## multivariate mixed forest call
+mv.obj &lt;- rfsrc(get.mv.formula(colnames(nutrigenomic$lipids)),
+            data.frame(do.call(cbind, nutrigenomic)),
+            importance=TRUE, nsplit = 10)
+
+## ------------------------------------------------------------
+## plot the standarized performance and VIMP values
+## ------------------------------------------------------------
+
+## acquire the error rate for each of the 21-coordinates 
+## standardize to allow for comparison across coordinates
+serr &lt;- get.mv.error(mv.obj, standardize = TRUE)
+
+## acquire standardized VIMP 
+svimp &lt;- get.mv.vimp(mv.obj, standardize = TRUE)
+
+par(mfrow = c(1,2))
+plot(serr, xlab = "Lipids", ylab = "Standardized Performance")
+matplot(svimp, xlab = "Genes/Diet/Genotype", ylab = "Standardized VIMP")
+
+
+## ------------------------------------------------------------
+## plot some trees
+## ------------------------------------------------------------
+
+plot(get.tree(mv.obj, 1))
+plot(get.tree(mv.obj, 2))
+plot(get.tree(mv.obj, 3))
+
+
+</pre>
+
+
+</div></body></html>

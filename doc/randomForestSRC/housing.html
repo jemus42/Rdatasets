@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Ames Iowa Housing Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for housing"><tr><td>housing</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Ames Iowa Housing Data</h2>
+
+<h3>Description</h3>
+
+<p>Data from the Ames Assessor's Office used in assessing values of
+individual residential properties sold in Ames, Iowa from 2006 to
+2010.  This is a regression problem and the goal is to predict 
+&quot;SalePrice&quot; which records the price of a home in thousands of dollars.
+</p>
+
+
+<h3>References</h3>
+
+<p>De Cock, D., (2011). Ames, Iowa: Alternative to the Boston housing
+data as an end of semester regression project. <em>Journal of Statistics
+Education</em>, 19(3), 1&ndash;14. 
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+## load the data
+data(housing, package = "randomForestSRC")
+
+## the original data contains lots of missing data
+## here's a fast but reasonably accurate way to impute the data
+housing2 &lt;- impute(data = housing, mf.q = 10, fast = TRUE)
+</pre>
+
+
+</div></body></html>

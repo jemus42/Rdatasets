@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Women's Interagency HIV Study (WIHS)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for wihs"><tr><td>wihs</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Women's Interagency HIV Study (WIHS)</h2>
+
+<h3>Description</h3>
+
+<p>Competing risk data set involving AIDS in women.
+</p>
+
+
+<h3>Format</h3>
+
+<p>A data frame containing:
+</p>
+
+<table summary="Rd table">
+<tr>
+ <td style="text-align: left;">
+    time </td><td style="text-align: left;"> time to event</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    status </td><td style="text-align: left;"> censoring status: 0=censoring, 1=HAART initiation, 2=AIDS/Death before HAART</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    ageatfda </td><td style="text-align: left;"> age in years at time of FDA approval of first protease inhibitor</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    idu </td><td style="text-align: left;"> history of IDU: 0=no history, 1=history</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    black </td><td style="text-align: left;"> race:  0=not African-American; 1=African-American</td>
+</tr>
+<tr>
+ <td style="text-align: left;">
+    cd4nadir </td><td style="text-align: left;"> CD4 count (per 100 cells/ul)
+  </td>
+</tr>
+
+</table>
+
+
+
+<h3>Source</h3>
+
+<p>Study included 1164 women enrolled in WIHS, who were alive, infected
+with HIV, and free of clinical AIDS on December, 1995, when the first
+protease inhibitor (saquinavir mesylate) was approved by the Federal
+Drug Administration. Women were followed until the first of the
+following occurred: treatment initiation, AIDS diagnosis, death, or
+administrative censoring (September, 2006). Variables included history
+of injection drug use at WIHS enrollment, whether an individual was
+African American, age, and CD4 nadir prior to baseline.</p>
+
+
+<h3>References</h3>
+
+<p>Bacon M.C, von Wyl V., Alden C., et al. (2005). The Women's Interagency
+HIV Study: an observational cohort brings clinical sciences to the
+bench, <em>Clin Diagn Lab Immunol</em>, 12(9):1013-1019.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+
+data(wihs, package = "randomForestSRC")
+wihs.obj &lt;- rfsrc(Surv(time, status) ~ ., wihs, nsplit = 3, ntree = 100)
+
+</pre>
+
+
+</div></body></html>

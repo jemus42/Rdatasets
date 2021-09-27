@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Interval-censored data for times to cytomegalovirus (CMV)...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container">
+
+<table width="100%" summary="page for cmv"><tr><td>cmv</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+Interval-censored data for times to cytomegalovirus (CMV) shedding in blood and urine
+</h2>
+
+<h3>Description</h3>
+
+<p>The <code>cmv</code> data frame is based on an AIDS clinic trial on HIV-infected individuals. The data involve 204 patients who are classified into two groups based on whether patient's CD4 count is below 75 cells per <i>&mu; l</i> or not. Among the 204 patients,  111 of them had a CD4 count below 75. 
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+data(cmv)
+</pre>
+
+
+<h3>Format</h3>
+
+<p>A data frame with 204 observations on the following 6 variables.
+</p>
+
+<dl>
+<dt><code>patient</code></dt><dd><p>patient id</p>
+</dd>
+<dt><code>lb</code></dt><dd><p>left end point of an censoring interval for time to CMV shedding in blood</p>
+</dd>
+<dt><code>rb</code></dt><dd><p>right end point of an censoring interval for time to CMV shedding in blood</p>
+</dd>
+<dt><code>lu</code></dt><dd><p>left end point of an censoring interval for time to CMV shedding in urine</p>
+</dd>
+<dt><code>ru</code></dt><dd><p>right end point of an censoring interval for time to CMV shedding in urine</p>
+</dd>
+<dt><code>cd4ind</code></dt><dd><p>group indicator if patient's baseline CD4 count is below 75 (1 for below 75 and 0 otherwise)</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p>The survival times are time to the presence of CMV in blood and ullrine, respectively. The censoring intervals are in the format of <i>(l_b, r_b]</i> and <i>(l_u, r_u]</i>. For CMV in blood, there are 7 left-censored, 23 interval-censored, and 174 right-censored, but no exact observations. For CMV in urine, there are 49 left-censored, 67 interval-censored, and 88 right-censored, but no exact observations.  
+</p>
+
+
+<h3>Source</h3>
+
+<p>J. Sun (2006), &quot;The Statistical Analysis of Interval-censored Failure Time Data&quot;, Springer.
+</p>
+
+
+<h3>References</h3>
+
+<p>W. B. Goggins and D. M. Finkelstein (2000), &quot;A proportional hazards model for multivariate interval-censored failure time data&quot;, Biometrics, 56: 940-943.
+</p>
+
+
+</div></body></html>
