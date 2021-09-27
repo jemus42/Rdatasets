@@ -16,21 +16,37 @@ library(DT)
 library(dplyr)
 ```
 
+This is a slightly adapted version of [Vincent's very handy project](https://github.com/vincentarelbundock/Rdatasets) with some added packages and a couple of tweaks to the table.
 
 ```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
 xdat <- read.csv(here::here("datasets.csv")) %>%
   mutate(
+    Package = factor(Package),
     CSV = paste0('<a href="', CSV, '">CSV</a>'),
-    CSV = purrr::map(CSV, gt::html),
+    #CSV = purrr::map(CSV, htmltools::HTML),
     Doc = paste0('<a href="', Doc, '">Doc</a>'),
-    Doc = purrr::map(Doc, gt::html)
+    #Doc = purrr::map(Doc, htmltools::HTML),
+    Link = paste(CSV, "<br/>", Doc),
+    Link = purrr::map(Link, htmltools::HTML)
   ) %>%
-  select(Package, Item, Title, CSV, Doc, Rows, Cols, order(names(.)))
+  select(Package, Item, Title, Link, Rows, Cols, order(names(.)), -CSV, -Doc)
 
 datatable(
   xdat, 
   style = "bootstrap4",
-  options = list(paging = FALSE), 
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    lengthMenu = c(10, 100, 500, 1000),
+    fixedHeader = TRUE,
+    # paging = FALSE,
+    autoWidth = TRUE,
+    columnDefs = list(
+      list(width = '50px', targets = c(0, 1)),
+      list(width = '200px', targets = c(4, 5)),
+      list(targets = c(3), searchable = FALSE)
+    )
+  ), 
   filter = "top"
 )
 ```
