@@ -23,15 +23,18 @@ tablify <- function(x, ...) {
     options = list(
       pageLength = 10,
       lengthMenu = c(10, 100, 500, 1000),
-      fixedHeader = TRUE,
+      # fixedHeader = TRUE,
       # paging = FALSE,
       autoWidth = TRUE,
       columnDefs = list(
-        list(targets = 0, width = '50px'),
-        list(targets = 1, width = '60px'),
+        # Unfortunately widths are all over the place
+        # due to some very long dataset names
+        list(targets = 0, width = '5%'),
+        list(targets = 1, width = '5%'),
+        list(targets = 2, width = '30%'),
         list(targets = 3, searchable = FALSE),
-        list(targets = 4, width = '200px'),
-        list(targets = 5, width = '200px')
+        list(targets = 4, width = '10%'),
+        list(targets = 5, width = '10%')
       )
     ), 
     filter = "top",
@@ -39,11 +42,6 @@ tablify <- function(x, ...) {
   )
 }
 
-```
-
-This is a slightly adapted version of [Vincent's very handy project](https://github.com/vincentarelbundock/Rdatasets) with some added packages and a couple of tweaks to the table.
-
-```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
 xdat <- read.csv(here::here("datasets.csv")) %>%
   mutate(
     Package = factor(Package),
@@ -56,5 +54,61 @@ xdat <- read.csv(here::here("datasets.csv")) %>%
   ) %>%
   select(Package, Item, Title, Link, Rows, Cols, order(names(.)), -CSV, -Doc)
 
+```
+
+This is a slightly adapted version of [Vincent's very handy project](https://github.com/vincentarelbundock/Rdatasets) with some added packages and a couple of tweaks to the table.
+
+Please note that not all datasets could be parsed correctly, with some type-specific issues for non-`data.frame` datasets such as `plyr::ozone` which is an `array` with dimensions `24 24 72`.
+
+# Datasets {.tabset}
+
+## All
+
+This shows all  `r nrow(xdat)` datasets.
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
 tablify(xdat)
+```
+
+## Small
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset <- xdat %>%
+  filter(Rows <= 100, Cols <= 10)
+```
+
+This subset contains `r nrow(xdat_subset)` datasets with `Rows <= 100 & Cols <= 10`.
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset %>%
+  tablify()
+```
+
+## High dimensional
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset <- xdat %>%
+  filter(Cols > Rows)
+```
+
+This subset contains `r nrow(xdat_subset)` datasets with `Cols > Rows`.   
+Defining high-dimensionality is hard but this seems like a place to start.
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset %>%
+  tablify()
+```
+
+## Large
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset <- xdat %>%
+  filter(Rows >= 10000)
+```
+
+This subset contains `r nrow(xdat_subset)` datasets with `Rows >= 10000`.
+
+```{r, messages=FALSE, warnings=FALSE, echo=FALSE}
+xdat_subset %>%
+  tablify()
 ```
