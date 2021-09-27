@@ -14,6 +14,31 @@ knitr::opts_chunk$set(
 options(DT.warn.size = FALSE)
 library(DT)
 library(dplyr)
+
+tablify <- function(x, ...) {
+  datatable(
+    x, 
+    style = "bootstrap4",
+    rownames = FALSE,
+    options = list(
+      pageLength = 10,
+      lengthMenu = c(10, 100, 500, 1000),
+      fixedHeader = TRUE,
+      # paging = FALSE,
+      autoWidth = TRUE,
+      columnDefs = list(
+        list(targets = 0, width = '50px'),
+        list(targets = 1, width = '60px'),
+        list(targets = 3, searchable = FALSE),
+        list(targets = 4, width = '200px'),
+        list(targets = 5, width = '200px')
+      )
+    ), 
+    filter = "top",
+    ...
+  )
+}
+
 ```
 
 This is a slightly adapted version of [Vincent's very handy project](https://github.com/vincentarelbundock/Rdatasets) with some added packages and a couple of tweaks to the table.
@@ -31,22 +56,5 @@ xdat <- read.csv(here::here("datasets.csv")) %>%
   ) %>%
   select(Package, Item, Title, Link, Rows, Cols, order(names(.)), -CSV, -Doc)
 
-datatable(
-  xdat, 
-  style = "bootstrap4",
-  rownames = FALSE,
-  options = list(
-    pageLength = 10,
-    lengthMenu = c(10, 100, 500, 1000),
-    fixedHeader = TRUE,
-    # paging = FALSE,
-    autoWidth = TRUE,
-    columnDefs = list(
-      list(width = '50px', targets = c(0, 1)),
-      list(width = '200px', targets = c(4, 5)),
-      list(targets = c(3), searchable = FALSE)
-    )
-  ), 
-  filter = "top"
-)
+tablify(xdat)
 ```
